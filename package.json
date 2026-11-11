@@ -1,0 +1,76 @@
+{
+  "name": "jarvis-hud",
+  "version": "5.0.0",
+  "description": "JARVIS HUD desktop assistant",
+  "author": "ME",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "main.js",
+
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:dir": "electron-builder --dir",
+    "postinstall": "python -m pip install --quiet llama-cpp-python pypdf python-docx pywinauto skyfield"
+  },
+
+  "dependencies": {
+    "node-cron": "^4.6.0"
+  },
+
+  "devDependencies": {
+    "electron": "^43.4.1",
+    "electron-builder": "^26.15.3"
+  },
+
+  "build": {
+    "appId": "com.me.jarvis-hud",
+    "productName": "JARVIS",
+
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!build/**",
+      "!venv/**",
+      "!**/__pycache__/**",
+      "!**/*.pyc",
+      "!models/**",
+      "!ComfyUI/**",
+      "!chat_data/**",
+      "!generated_media/**",
+      "!wheels/**",
+      "!*.log",
+      "!**/*.log",
+      "!pip-*.txt",
+      "!imports.txt",
+      "!llama-cli.exe",
+      "!de421.bsp",
+      "!ai_server.py",
+      "!comfy_client.py",
+      "!mcp_client.py"
+    ],
+
+    "extraResources": [
+      { "from": "ai_server.py",    "to": "ai_server.py" },
+      { "from": "comfy_client.py", "to": "comfy_client.py" },
+      { "from": "mcp_client.py",   "to": "mcp_client.py" },
+      { "from": "de421.bsp",       "to": "de421.bsp" }
+    ],
+
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }]
+    },
+
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

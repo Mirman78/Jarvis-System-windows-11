@@ -1,0 +1,35 @@
+[
+  {
+    "id": "mvbaaum2dhdg9",
+    "name": "Quake",
+    "cronExpression": "*/15 * * * *",
+    "workflow": {
+      "type": "script",
+      "scriptPath": "C:\\Users\\ME\\Desktop\\Another Ai Claude\\quake_check.py",
+      "outputAction": "chat"
+    },
+    "enabled": true
+  },
+  {
+    "id": "mvbbiuh8hrvfh",
+    "name": "News",
+    "cronExpression": "0 */1 * * *",
+    "workflow": {
+      "type": "script",
+      "scriptPath": "C:\\Users\\ME\\Desktop\\Another Ai Claude\\fetch_news.py",
+      "outputAction": "chat"
+    },
+    "enabled": true
+  },
+  {
+    "id": "mve4cpc9y4g6b",
+    "name": "Haze",
+    "cronExpression": "*/15 * * * *",
+    "workflow": {
+      "type": "script",
+      "scriptPath": "C:\\Users\\ME\\Desktop\\Another Ai Claude\\haze.py",
+      "outputAction": "chat"
+    },
+    "enabled": true
+  }
+]

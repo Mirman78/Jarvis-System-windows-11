@@ -1,0 +1,38 @@
+# Install torch FIRST, from the CUDA index, then this file
+# (see setup-python.bat for the torch line)
+
+accelerate==1.15.0
+diffusers==0.39.0
+transformers==4.51.3
+safetensors==0.8.0
+einops==0.8.2
+kornia==0.8.3
+kornia_rs==0.2.0
+spandrel==0.4.2
+av==19.0.2
+ImageIO==2.38.1
+imageio-ffmpeg==0.7.0
+opencv-python==4.11.0.86
+sentencepiece==0.2.2
+tokenizers==0.21.4
+tiktoken==0.14.0
+ftfy==6.3.1
+huggingface_hub==0.36.2
+hf-xet==1.7.1
+dashscope==2.0.3
+modelscope==1.40.2
+llama_cpp_python==0.3.36
+ninja==1.13.2
+torchsde==0.2.6
+comfy-cli==1.24.0
+comfyui-manager==4.2.2
+
+# numpy/scipy are also needed by torch stack
+numpy==2.5.4
+scipy==1.18.1
+sympy==1.13.1
+networkx==3.7
+mpmath==1.3.0
+fsspec==2026.9.0
+filelock==4.2.4
+Jinja2==3.1.6
